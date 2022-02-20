@@ -3,6 +3,7 @@ package questao03;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Questao03 {
 
@@ -16,8 +17,13 @@ public class Questao03 {
 		 * 
 		 */
 
-		String palavra = "amoreira";
+		String palavra;
 		int contador = 0;
+		
+		Scanner entradaPalavra = new Scanner(System.in);
+		
+		System.out.println("Digite a palavra para saber quantas substrings anagramas ela possui:");
+		palavra = entradaPalavra.next();
 
 		List<String> substringsDePalavra = listarSubstr(palavra);
 
@@ -32,6 +38,7 @@ public class Questao03 {
 			}
 		}
 		System.out.println("Números de pares de substrings anagramas: " + contador);
+		entradaPalavra.close();
 
 	}
 
